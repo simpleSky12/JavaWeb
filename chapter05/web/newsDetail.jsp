@@ -40,7 +40,9 @@
                         </div>
                         <div class="article-content">
                             <span class="article-summary"><b>摘要：</b>${news.summary}</span>
-                            
+	                        <c:if test="${!(empty news.picPath)}">
+		                        <img onclick="location='${pageContext.request.contextPath}/NewsServlet?action=download&fileName=${news.picPath}'" src="${pageContext.request.contextPath}/upload/${news.picPath}" width="540"/><br/>
+	                        </c:if>
                             ${news.content}
                         </div>
                         <div class="comment">

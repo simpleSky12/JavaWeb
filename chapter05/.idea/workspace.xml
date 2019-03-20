@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="chapter05:war exploded" />
+      <artifact name="chapter05" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
@@ -19,8 +19,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/servlet/NewsServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="64" column="14" selection-start-line="64" selection-start-column="14" selection-end-line="68" selection-end-column="15" />
+            <state relative-caret-position="431">
+              <caret line="141" column="78" selection-start-line="141" selection-start-column="78" selection-end-line="141" selection-end-column="78" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -29,34 +29,15 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/biz/impl/NewsBiz.java">
+        <entry file="file://$PROJECT_DIR$/src/entity/News.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="575">
-              <caret line="45" selection-start-line="45" selection-end-line="45" />
+            <state relative-caret-position="250">
+              <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
               <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/entity/Category.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-              <folding>
-                <element signature="e#196#197#0" expanded="true" />
-                <element signature="e#233#234#0" expanded="true" />
-                <element signature="e#261#262#0" expanded="true" />
-                <element signature="e#292#293#0" expanded="true" />
-                <element signature="e#319#320#0" expanded="true" />
-                <element signature="e#359#360#0" expanded="true" />
                 <element signature="e#391#392#0" expanded="true" />
-                <element signature="e#426#427#0" expanded="true" />
-                <element signature="e#459#460#0" expanded="true" />
-                <element signature="e#509#510#0" expanded="true" />
-                <element signature="e#553#554#0" expanded="true" />
+                <element signature="e#420#421#0" expanded="true" />
+                <element signature="e#461#462#0" expanded="true" />
+                <element signature="e#497#498#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -65,7 +46,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/filter/UserFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
+            <state relative-caret-position="350">
               <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -89,7 +70,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/newsList.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1575">
+            <state relative-caret-position="258">
               <caret line="63" selection-start-line="63" selection-end-line="63" />
             </state>
           </provider>
@@ -100,6 +81,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="115">
               <caret line="88" column="81" selection-start-line="88" selection-start-column="81" selection-end-line="88" selection-end-column="81" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/newsDetail.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="42" column="62" selection-start-line="42" selection-start-column="62" selection-end-line="42" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -193,7 +183,6 @@
         <option value="$PROJECT_DIR$/src/servlet/ComServlet.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/web/common/top.jsp" />
-        <option value="$PROJECT_DIR$/web/newsDetail.jsp" />
         <option value="$PROJECT_DIR$/src/filter/UserFilter.java" />
         <option value="$PROJECT_DIR$/web/common/slide.jsp" />
         <option value="$PROJECT_DIR$/web/editnews.jsp" />
@@ -204,6 +193,7 @@
         <option value="$PROJECT_DIR$/web/newsList.jsp" />
         <option value="$PROJECT_DIR$/src/dao/impl/NewsDao.java" />
         <option value="$PROJECT_DIR$/web/addnews.jsp" />
+        <option value="$PROJECT_DIR$/web/newsDetail.jsp" />
         <option value="$PROJECT_DIR$/src/servlet/NewsServlet.java" />
       </list>
     </option>
@@ -216,9 +206,9 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-98" />
-    <option name="y" value="17" />
-    <option name="width" value="978" />
+    <option name="x" value="6" />
+    <option name="y" value="10" />
+    <option name="width" value="1104" />
     <option name="height" value="1050" />
   </component>
   <component name="ProjectView">
@@ -238,6 +228,24 @@
             <path>
               <item name="chapter05" type="b2602c69:ProjectViewProjectNode" />
               <item name="chapter05" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chapter05" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chapter05" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chapter05" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chapter05" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
+              <item name="chapter05" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chapter05" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chapter05" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -245,13 +253,6 @@
               <item name="chapter05" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="chapter05" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chapter05" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="chapter05" type="b2602c69:ProjectViewProjectNode" />
@@ -266,17 +267,21 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552963934483" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552996265023" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.14367816" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="settings.editor.splitter.proportion" value="0.30072463" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\javaCode\JavaWebHomework\chapter05\out\artifacts\chapter05" />
+      <recent name="D:\javaCode\JavaWebHomework\chapter05\out\artifacts\chapter05_war_exploded" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\javaCode\JavaWebHomework\chapter05\web\WEB-INF\lib" />
       <recent name="D:\javaCode\JavaWebHomework\chapter05\web" />
@@ -301,7 +306,7 @@
       <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
       <deployment>
-        <artifact name="chapter05:war exploded">
+        <artifact name="chapter05">
           <settings>
             <option name="CONTEXT_PATH" value="/chapter05" />
           </settings>
@@ -367,7 +372,7 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="chapter05:war exploded" />
+          <artifact name="chapter05" />
         </option>
       </method>
     </configuration>
@@ -462,12 +467,12 @@
       <workItem from="1552919547538" duration="6762000" />
       <workItem from="1552956929097" duration="57000" />
       <workItem from="1552957016006" duration="2799000" />
-      <workItem from="1552973888949" duration="3622000" />
+      <workItem from="1552973888949" duration="12302000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106210000" />
+    <option name="totallyTimeSpent" value="114890000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
@@ -479,7 +484,7 @@
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info id="Web" order="5" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="6" weight="0.32596686" />
+      <window_info content_ui="combo" id="Project" order="6" weight="0.32573727" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Duplicate detector" order="0" weight="0.32900432" />
       <window_info anchor="bottom" id="Application Servers" order="1" weight="0.32756132" />
@@ -491,11 +496,11 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Message" order="8" />
       <window_info anchor="bottom" id="Find" order="9" />
-      <window_info anchor="bottom" id="Run" order="10" weight="0.34632036" />
+      <window_info anchor="bottom" id="Run" order="10" weight="0.34199134" />
       <window_info anchor="bottom" id="Debug" order="11" weight="0.35353535" />
       <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
-      <window_info anchor="bottom" id="Messages" order="14" weight="0.3270073" />
+      <window_info anchor="bottom" id="Messages" order="14" weight="0.32611832" />
       <window_info anchor="bottom" id="TODO" order="15" />
       <window_info anchor="right" id="Maven" order="0" />
       <window_info anchor="right" id="Palette" order="1" />
@@ -773,19 +778,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/entity/News.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="21" column="29" lean-forward="true" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
-          <folding>
-            <element signature="e#391#392#0" expanded="true" />
-            <element signature="e#420#421#0" expanded="true" />
-            <element signature="e#461#462#0" expanded="true" />
-            <element signature="e#497#498#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/servlet/ComServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -807,13 +799,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="107">
           <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/newsDetail.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-254">
-          <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -875,33 +860,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/filter/UserFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/biz/INewsBiz.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/newsList.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1575">
-          <caret line="63" selection-start-line="63" selection-end-line="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/dao/INewsDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -922,10 +880,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/editnews.jsp">
+    <entry file="file://$PROJECT_DIR$/src/entity/News.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="26" column="57" selection-start-line="26" selection-start-column="57" selection-end-line="26" selection-end-column="57" />
+        <state relative-caret-position="250">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+          <folding>
+            <element signature="e#391#392#0" expanded="true" />
+            <element signature="e#420#421#0" expanded="true" />
+            <element signature="e#461#462#0" expanded="true" />
+            <element signature="e#497#498#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/filter/UserFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/biz/INewsBiz.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/newsList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="63" selection-start-line="63" selection-end-line="63" />
         </state>
       </provider>
     </entry>
@@ -936,10 +927,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/editnews.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="26" column="57" selection-start-line="26" selection-start-column="57" selection-end-line="26" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/newsDetail.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="42" column="62" selection-start-line="42" selection-start-column="62" selection-end-line="42" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/servlet/NewsServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="64" column="14" selection-start-line="64" selection-start-column="14" selection-end-line="68" selection-end-column="15" />
+        <state relative-caret-position="431">
+          <caret line="141" column="78" selection-start-line="141" selection-start-column="78" selection-end-line="141" selection-end-column="78" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -953,13 +958,13 @@
         <settings>
           <artifact-editor>
             <show-content>
-              <type id="javaee-facet-resources" />
-              <type id="jpa-descriptors" />
-              <type id="library" />
               <type id="artifact" />
+              <type id="jpa-descriptors" />
+              <type id="javaee-facet-resources" />
+              <type id="library" />
             </show-content>
           </artifact-editor>
-          <last-edited>chapter05:war exploded</last-edited>
+          <last-edited>chapter05</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1012,7 +1017,6 @@
             <option name="proportions">
               <list>
                 <option value="0.14367816" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

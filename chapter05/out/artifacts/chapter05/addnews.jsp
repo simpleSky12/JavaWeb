@@ -86,8 +86,8 @@
         <!--//-->
     </div>
     <div class="main-content-right">
-        <form action="${pageContext.request.contextPath}/NewsServlet" method="post" enctype="multipart/form-data">
-	        <input type="hidden" name="action" value="addTo">
+        <form action="${pageContext.request.contextPath}/NewsServlet?action=addTo" method="post" enctype="multipart/form-data">
+	        <%--<input type="hidden" name="action" value="addTo">--%>
         		<p>新闻标题： <input type="text" name="title"/></p>
         		<p>
         			新闻分类：

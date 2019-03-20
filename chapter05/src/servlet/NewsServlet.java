@@ -10,15 +10,21 @@ import entity.Category;
 import entity.Com;
 import entity.News;
 import entity.User;
+import org.apache.commons.fileupload.FileItem;
+import org.apache.commons.fileupload.FileUploadException;
+import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 import util.PageUtil;
 
 import javax.servlet.ServletException;
+import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.io.PrintWriter;
+import javax.servlet.http.HttpSession;
+import javax.xml.ws.Response;
+import java.io.*;
+import java.net.URLEncoder;
 import java.util.Date;
 import java.util.List;
 
@@ -51,22 +57,52 @@ public class NewsServlet extends HttpServlet {
             req.setAttribute("categories",categories);
             req.getRequestDispatcher("/addnews.jsp").forward(req,resp);
         }else if("addTo".equals(action)){
-            News news = fillNews(req);
+
+            News news = new News();
+            User user = (User)req.getSession().getAttribute("loginUser");
+            news.setAuthor(user.getUserName());
+            news.setStatus(1);
             news.setCreateDate(new Date());
-            String msg = "";
-            if(newsBiz.insertNews(news)){
-                msg = "新闻发布成功";
-            }else{
-                msg = "新闻发布失败";
-            };
-            PrintWriter out = resp.getWriter();
-            out.println("<script>alert('"+msg+"');location='"+req.getContextPath()+"/NewsServlet'</script>");
-            out.close();
-//            News news = new News();
-//            news.setCreateDate(new Date());
-//            if(ServletFileUpload.isMultipartContent(req)){ // 判断请求是否为上传文件
-//                ServletFileUpload upload
-//            }
+            if(ServletFileUpload.isMultipartContent(req)){ // 判断请求是否为上传文件
+                ServletFileUpload upload = new ServletFileUpload(new DiskFileItemFactory());
+                try{
+                    List<FileItem> items = upload.parseRequest(req);
+                    for(FileItem fileItem : items){
+                        //  非文件域文件
+                        if(fileItem.isFormField()){
+                            if ("title".equals(fileItem.getFieldName())){
+                                news.setTitle(fileItem.getString("UTF-8"));
+                            }else if("categoryId".equals(fileItem.getFieldName())){
+                                news.setCategoryId(Integer.parseInt(fileItem.getString("utf-8")));
+                            }else if("summary".equals(fileItem.getFieldName())){
+                                news.setSummary(fileItem.getString("utf-8"));
+                            }else if("content".equals(fileItem.getFieldName())){
+                                news.setContent(fileItem.getString("utf-8"));
+                            }
+                        }else{
+                            // 文件的上传就是利用流进行复制粘贴，我需要 获取上传文件的原来路径，以及目标路径
+                            String fileName = fileItem.getName();
+                            String path = req.getServletContext().getRealPath("upload");
+                            File file = new File(path,fileName);
+                            fileItem.write(file);
+                            news.setPicPath(fileName);
+                        }
+                    }
+                    String msg = "";
+                    if(newsBiz.insertNews(news)){
+                        msg = "新闻发布成功";
+                    }else{
+                        msg = "新闻发布失败";
+                    };
+                    PrintWriter out = resp.getWriter();
+                    out.println("<script>alert('"+msg+"');location='"+req.getContextPath()+"/NewsServlet'</script>");
+                    out.close();
+                } catch (FileUploadException e) {
+                    e.printStackTrace();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
 
         }else if("modify".equals(action)){
             int id = Integer.parseInt(req.getParameter("id"));
@@ -92,6 +128,28 @@ public class NewsServlet extends HttpServlet {
             PrintWriter out = resp.getWriter();
             out.println("<script>alert('"+msg+"');location='"+req.getContextPath()+"/NewsServlet'</script>");
 
+        }else if("download".equals(action)){
+            String fileName = req.getParameter("fileName");
+            String path = req.getServletContext().getRealPath("/upload");
+            File file = new File(path,fileName);
+            String  contentType = getServletContext().getMimeType(fileName);//通过文件名中的后缀名来确定文件的格式
+            if(contentType==null){
+                contentType = "application/octet-stream"; // 文件的通用格式
+            }
+            resp.setContentType(contentType);
+            String fileCN = URLEncoder.encode(file.getName(),"utf-8");// 解决下载后文件名中文乱码
+            // 设置response 中的响应头
+            resp.addHeader("Content-Disposition","attachment;filename="+fileCN);
+            resp.addHeader("Content-Length",""+file.length());
+            FileInputStream fis = new FileInputStream(file);
+            ServletOutputStream sos = resp.getOutputStream();
+            byte[] buf = new byte[1024];
+            int len = 0;
+            while((len=fis.read(buf))!=-1){
+                sos.write(buf,0,len);
+            }
+            fis.close();
+            sos.close();
         }else if("del".equals(action)){
             int id = Integer.parseInt(req.getParameter("id"));
             String msg = "";
